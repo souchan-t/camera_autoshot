@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>カメラサンプル</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+        <meta name="viewport" content="widht=device-width,initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="stylesheets/camera.css">
+    </head>
+
+    <script src="javascripts/jquery-3.3.1.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js'></script>
+    <!--
+    <script src="https://docs.opencv.org/4.0.1/opencv.js"></script>
+    -->
+    <script src="javascripts/opencv.js"></script>
+    <body>
+        <div class="cls_video_base" >
+            <div class="cls_frame"></div>
+            <video id="_video" class="cls_video" controls="true" autoplay muted ></video>
+        </div>
+        <!--<img id="_image" class="cls_image">-->
+        <div>
+            <canvas id="_canvas"></canvas>
+        </div>
+        <br>
+        <input id="snap" type="button" value="撮影">
+        <input id="ocr" type="button" value="TesseractOCR">
+        <input id="exec" type="button" value="輪郭検出">
+        <input id="real_exec" type="button" value="リアルタイム輪郭検出" ><br>
+        <div id="div_range_area_thre"></div>
+        <input id="range_area_thre" type="range" value="400" min="0" max="5000"><br>
+        <div id="div_range_max_area"></div>
+        <input id="range_max_area" type="range" value="12000" min="5000" max="20000">
+
+        <script src="javascripts/camera.js"></script>
+        <div id="output"></div>
+    </body>
+</html>
